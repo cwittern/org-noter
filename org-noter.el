@@ -1873,9 +1873,9 @@ defines if the text should be inserted inside the note."
                (when (org-noter--session-hide-other session) (org-overview))
                ;; NOTE(cw): Without this, it seems the note is not inserted?!
                (unless (zerop (length selected-text))
-                 (insert "#+begin_quote")
+                 (insert "#+begin_quote\n")
                  (insert selected-text)
-                 (insert "#+end_quote"))
+                 (insert "#+end_quote\n"))
                (setf (org-noter--session-num-notes-in-view session)
                      (1+ (org-noter--session-num-notes-in-view session)))))
 
